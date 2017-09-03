@@ -16,7 +16,7 @@ namespace ConsoleApplication1
             Console.WriteLine("podaj wartość maksymalną");
             b = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("losowa suma to " + suma.add(a, b));
+            Console.WriteLine("losowa suma to " + suma.add(a, b)); // przy pomocy add. odwołuję się do classy suma
 
             Console.ReadLine();
         }
@@ -24,13 +24,14 @@ namespace ConsoleApplication1
 
     class suma
     {
-        public static int add(int a, int b)
+        public static int add(int a, int b)  // ograniczam klasę do int a i b podanych w konsoli
         {
             Random los = new Random();
-            int al = los.Next(a, b);
+            int al = los.Next(a, b); // odwołuję się to int a i b podanych do konsoli przez użytkownika
             int bl = los.Next(a, b);
             return al + bl;
 
+           
         }
         
     }

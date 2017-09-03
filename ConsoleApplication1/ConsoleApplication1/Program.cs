@@ -18,7 +18,8 @@ namespace ConsoleApplication1
             string imie;
             imie = Console.ReadLine();
 
-            Console.WriteLine("Cześć " + imie + "fajnie że masz " + wiek + "lat.");
+            Console.WriteLine("Cześć " + imie + "fajnie że masz " + wiek + " lat.");
+            Console.ReadLine();
         }
     }
 }

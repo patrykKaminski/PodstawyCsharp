@@ -13,16 +13,19 @@ namespace ConsoleApplication1
             int a, b;
             Console.WriteLine("Podaj minimalną wartość");
             a = int.Parse(Console.ReadLine());
+            while (!(int.TryParse(Console.ReadLine(), out a) && (int.TryParse(Console.ReadLine(), out b)))) //do poprawy
+                Console.WriteLine("zle");
             Console.WriteLine("podaj wartość maksymalną");
             b = int.Parse(Console.ReadLine());
 
             Console.WriteLine("losowa suma to " + suma.add(a, b)); // przy pomocy add. odwołuję się do classy suma
 
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 
-    class suma
+    class suma4
+
     {
         public static int add(int a, int b)  // ograniczam klasę do int a i b podanych w konsoli
         {
